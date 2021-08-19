@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] Camera FPCamera;
+    [SerializeField] Camera FPCamera = null;
     [SerializeField] float range = 100f;
     [SerializeField] float damage = 30f;
-    [SerializeField] ParticleSystem muzzleFlash;
-    [SerializeField] GameObject hitEffect;
+    [SerializeField] ParticleSystem muzzleFlash = null;
+    [SerializeField] GameObject hitEffect = null;
 
     void Update()
     {
