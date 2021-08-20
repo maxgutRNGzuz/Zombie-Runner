@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (hitpoints <= 0f)
         {
-            print("You dead, git gud");
+            GetComponent<DeathHandler>().HandleDeath();
         }
     }
 }
