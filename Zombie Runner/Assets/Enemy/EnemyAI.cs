@@ -5,30 +5,41 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] Transform target = null;
+    public bool isProvoked = false;
+
+    [SerializeField] Transform player = null;
+    [SerializeField] Transform destination = null;
     [SerializeField] float chaseRange = 5f;
     [SerializeField] float turnSpeed = 5f;
 
     Animator animator;
     NavMeshAgent navMeshAgent;
+    Transform target;
     float targetDistance = Mathf.Infinity;
-    bool isProvoked = false;
+    float playerDistance = Mathf.Infinity;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        target = destination;
     }
 
     void Update()
     {
         targetDistance = Vector3.Distance(target.position, transform.position);
+        if(target != player)
+        {
+            playerDistance = Vector3.Distance(player.position, transform.position);
+        }
+
+        EngageTarget();
 
         if (isProvoked)
         {
-            EngageTarget();
+            target = player;
         }
-        else if(targetDistance <= chaseRange)
+        else if(playerDistance <= chaseRange)
         {
             isProvoked = true;
         }
@@ -40,7 +51,7 @@ public class EnemyAI : MonoBehaviour
         {
             ChaseTarget();
         }
-        if (targetDistance <= navMeshAgent.stoppingDistance)
+        if (targetDistance <= navMeshAgent.stoppingDistance + 0.1f) //some buffer
         {
             AttackTarget();
         }
@@ -48,7 +59,7 @@ public class EnemyAI : MonoBehaviour
 
     void ChaseTarget()
     {
-        animator.SetBool("isAttacking", false); //cancels animation if player goes out of range
+        animator.SetBool("isAttacking", false); //cancels animation if target goes out of range
         navMeshAgent.SetDestination(target.position);
     }
 

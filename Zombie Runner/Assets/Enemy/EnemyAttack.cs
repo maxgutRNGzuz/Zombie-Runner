@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    PlayerHealth target;
     [SerializeField] float damage = 40f;
+
+    PlayerHealth player;
+    DestinationHealth destination;
 
     void Start()
     {
-        target = FindObjectOfType<PlayerHealth>();
+        player = FindObjectOfType<PlayerHealth>();
+        destination = FindObjectOfType<DestinationHealth>();
     }
 
     public void AttackHitEvent() //Animation Event Attack
     {
-        if(target == null)
+        if(player == null || destination == null)
         {
             return;
         }
 
-        target.TakeDamage(damage);
+        if(GetComponent<EnemyAI>().isProvoked == true)
+        {
+            player.TakeDamage(damage);
+        }
+        else
+        {
+            destination.TakeDamage(damage);
+        }
     }
 
 }

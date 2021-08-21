@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI respawnText;
-    [SerializeField] float respawnCountdown = 10f;
 
     public void ReloadGame()
     {
