@@ -61,8 +61,8 @@ public class EnemyAI : MonoBehaviour
     void ChaseTarget()
     {
         animator.SetBool("isAttacking", false); //cancels animation if target goes out of range
-        navMeshAgent.enabled = true;
         navMesheshObstacle.enabled = false;
+        navMeshAgent.enabled = true;
         navMeshAgent.SetDestination(target.position);
     }
 
