@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
 
     Animator animator;
     NavMeshAgent navMeshAgent;
+    NavMeshObstacle navMesheshObstacle;
     Transform target;
     float targetDistance = Mathf.Infinity;
     float playerDistance = Mathf.Infinity;
@@ -22,6 +23,7 @@ public class EnemyAI : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
+        navMesheshObstacle = GetComponent<NavMeshObstacle>();
         target = destination;
     }
 
@@ -46,7 +48,6 @@ public class EnemyAI : MonoBehaviour
     }
     void EngageTarget()
     {
-        FaceTarget();
         if (targetDistance >= navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
@@ -60,12 +61,17 @@ public class EnemyAI : MonoBehaviour
     void ChaseTarget()
     {
         animator.SetBool("isAttacking", false); //cancels animation if target goes out of range
+        navMeshAgent.enabled = true;
+        navMesheshObstacle.enabled = false;
         navMeshAgent.SetDestination(target.position);
     }
 
     void AttackTarget()
     {
+        FaceTarget();
         animator.SetBool("isAttacking", true);
+        navMeshAgent.enabled = false;
+        navMesheshObstacle.enabled = true;
         print(name + " attacking " + target.name);
     }
 
