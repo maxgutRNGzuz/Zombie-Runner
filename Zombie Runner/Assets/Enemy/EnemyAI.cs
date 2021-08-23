@@ -72,7 +72,6 @@ public class EnemyAI : MonoBehaviour
         animator.SetBool("isAttacking", true);
         navMeshAgent.enabled = false;
         navMesheshObstacle.enabled = true;
-        print(name + " attacking " + target.name);
     }
 
     void FaceTarget()

@@ -37,13 +37,13 @@ public class Weapon : MonoBehaviour
         {
             CreateHitImpact(hit);
 
+            print(hit.transform.name);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
 
             if (target == null)
             {
                 return;
             }
-
             target.TakeDamage(damage);
         }
         else
