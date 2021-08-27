@@ -15,8 +15,14 @@ public class Weapon : MonoBehaviour
 
     bool canShoot = true;
 
+    public void ChangeCanShoot(bool value)
+    {
+        canShoot = value;
+    }
+
     void Update()
     {
+                print(canShoot);
         if (Input.GetMouseButton(0) && canShoot == true)
         {
             if(ammoSlot.GetCurrentAmmo() > 0)

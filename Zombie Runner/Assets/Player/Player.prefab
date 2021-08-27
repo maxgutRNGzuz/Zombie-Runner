@@ -340,6 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4494538600089569001}
   - component: {fileID: 1858452501}
+  - component: {fileID: 1858452502}
   m_Layer: 8
   m_Name: Weapons
   m_TagString: Untagged
@@ -376,6 +377,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoAmount: 10000
+--- !u!114 &1858452502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6905451308302719960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06165bd68e2aaae40bd518d7ee2367e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 1131685213370378}
+  - {fileID: 3041978429379733599}
 --- !u!1 &7762552493465309479
 GameObject:
   m_ObjectHideFlags: 0
@@ -564,6 +580,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4cd9729fa31ca3e4ebd5d54270ea18d5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13b4446cf7a4a864ea363d6f3952dc53, type: 3}
+--- !u!1 &1131685213370378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2111803598630270643, guid: 13b4446cf7a4a864ea363d6f3952dc53,
+    type: 3}
+  m_PrefabInstance: {fileID: 2110683465671003833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8388323560323808298 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7576154876862771859, guid: 13b4446cf7a4a864ea363d6f3952dc53,
@@ -672,8 +694,24 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 2000000}
+    - target: {fileID: 6451708335343953791, guid: 4ded245bc37f7b6479027e5b8fa92e0f,
+        type: 3}
+      propertyPath: normalFOV
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451708335343953791, guid: 4ded245bc37f7b6479027e5b8fa92e0f,
+        type: 3}
+      propertyPath: normalMouseSensitivity
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ded245bc37f7b6479027e5b8fa92e0f, type: 3}
+--- !u!1 &3041978429379733599 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7452249671834456814, guid: 4ded245bc37f7b6479027e5b8fa92e0f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5574597433048087217}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4920229020420593956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 654386361735734165, guid: 4ded245bc37f7b6479027e5b8fa92e0f,

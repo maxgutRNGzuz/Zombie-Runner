@@ -12,12 +12,12 @@ public class WeaponZoom : MonoBehaviour
     [SerializeField] GameObject scopeOverlay = null;
     [SerializeField] GameObject weaponCamera = null;
     [SerializeField] Camera mainCamera = null;
+    [SerializeField] float normalFOV = 60f;
     [SerializeField] float scopedFOV = 40f;
+    [SerializeField] float normalMouseSensitivity = 2f;
     [SerializeField] float scopedMouseSensitivity = 0.5f;
 
     bool isScoped = false;
-    float normalFOV;
-    float normalMouseSensitivity;
 
     void Update()
     {
@@ -47,21 +47,18 @@ public class WeaponZoom : MonoBehaviour
         scopeOverlay.SetActive(true);
         weaponCamera.SetActive(false);
 
-        normalFOV = mainCamera.fieldOfView;
         mainCamera.fieldOfView = scopedFOV;
 
-        normalMouseSensitivity = fpsController.mouseLook.XSensitivity; //because x and y sensitivity stay the same for now
         fpsController.mouseLook.XSensitivity = scopedMouseSensitivity;
         fpsController.mouseLook.YSensitivity = scopedMouseSensitivity;
     }
 
-    void OnUnscoped()
+    public void OnUnscoped()
     {
         reticle.SetActive(true);
         scopeOverlay.SetActive(false);
         weaponCamera.SetActive(true);
 
-        mainCamera.fieldOfView = normalFOV;
         fpsController.mouseLook.XSensitivity = normalMouseSensitivity;
         fpsController.mouseLook.YSensitivity = normalMouseSensitivity;
     }

@@ -1923,12 +1923,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &765389831 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1131685213370378, guid: c6453f8e1f814744d8b94e5a6d1f9942,
-    type: 3}
-  m_PrefabInstance: {fileID: 736731736}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &796454158
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,12 +3339,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 77981422}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1674369673 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3041978429379733599, guid: c6453f8e1f814744d8b94e5a6d1f9942,
-    type: 3}
-  m_PrefabInstance: {fileID: 736731736}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1684484863
 GameObject:
   m_ObjectHideFlags: 0
@@ -3896,27 +3884,6 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
---- !u!1 &1858452499 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6905451308302719960, guid: c6453f8e1f814744d8b94e5a6d1f9942,
-    type: 3}
-  m_PrefabInstance: {fileID: 736731736}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1858452500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858452499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06165bd68e2aaae40bd518d7ee2367e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 765389831}
-  - {fileID: 1674369673}
 --- !u!1001 &1887464070
 PrefabInstance:
   m_ObjectHideFlags: 0
