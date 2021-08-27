@@ -527,6 +527,31 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 1858452501}
+    - target: {fileID: 4465913494395709055, guid: 13b4446cf7a4a864ea363d6f3952dc53,
+        type: 3}
+      propertyPath: m_Name
+      value: Muzzle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8841277778390918373, guid: 13b4446cf7a4a864ea363d6f3952dc53,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 702826c86307ea24f8cbbcb4d9219fbc, type: 2}
+    - target: {fileID: 4313302957593907523, guid: 13b4446cf7a4a864ea363d6f3952dc53,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cd9729fa31ca3e4ebd5d54270ea18d5, type: 2}
+    - target: {fileID: 5553060869867533922, guid: 13b4446cf7a4a864ea363d6f3952dc53,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cd9729fa31ca3e4ebd5d54270ea18d5, type: 2}
+    - target: {fileID: 956939673711239916, guid: 13b4446cf7a4a864ea363d6f3952dc53,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cd9729fa31ca3e4ebd5d54270ea18d5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13b4446cf7a4a864ea363d6f3952dc53, type: 3}
 --- !u!4 &8388323560323808298 stripped
@@ -627,6 +652,11 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 2000000}
+    - target: {fileID: 6451708335343953791, guid: 4ded245bc37f7b6479027e5b8fa92e0f,
+        type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 11400004}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ded245bc37f7b6479027e5b8fa92e0f, type: 3}
 --- !u!4 &4920229020420593956 stripped

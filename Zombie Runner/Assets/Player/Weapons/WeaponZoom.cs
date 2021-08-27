@@ -6,6 +6,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class WeaponZoom : MonoBehaviour
 {
     [SerializeField] Animator animator = null;
+    [SerializeField] RigidbodyFirstPersonController fpsController = null;
     [SerializeField] float transitionDuration = 0.1f;
     [SerializeField] GameObject reticle = null; //crosshair when not scoped
     [SerializeField] GameObject scopeOverlay = null;
@@ -17,12 +18,6 @@ public class WeaponZoom : MonoBehaviour
     bool isScoped = false;
     float normalFOV;
     float normalMouseSensitivity;
-    RigidbodyFirstPersonController fpsController;
-
-    void Start()
-    {
-        fpsController = GetComponentInParent<RigidbodyFirstPersonController>();
-    }
 
     void Update()
     {
