@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcbc9eb44734274a83486d5715299f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 10
+  ammoAmount: 10000
 --- !u!1 &7762552493465309479
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,9 +524,19 @@ PrefabInstance:
       objectReference: {fileID: 2000000}
     - target: {fileID: 2110683465287072475, guid: 13b4446cf7a4a864ea363d6f3952dc53,
         type: 3}
+      propertyPath: damage
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110683465287072475, guid: 13b4446cf7a4a864ea363d6f3952dc53,
+        type: 3}
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 1858452501}
+    - target: {fileID: 2110683465287072475, guid: 13b4446cf7a4a864ea363d6f3952dc53,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4465913494395709055, guid: 13b4446cf7a4a864ea363d6f3952dc53,
         type: 3}
       propertyPath: m_Name
@@ -642,6 +652,16 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 1858452501}
+    - target: {fileID: 7132978450553861445, guid: 4ded245bc37f7b6479027e5b8fa92e0f,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6451708335343953791, guid: 4ded245bc37f7b6479027e5b8fa92e0f,
+        type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 11400004}
     - target: {fileID: 6451708335343953791, guid: 4ded245bc37f7b6479027e5b8fa92e0f,
         type: 3}
       propertyPath: weaponCamera
@@ -652,11 +672,6 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 2000000}
-    - target: {fileID: 6451708335343953791, guid: 4ded245bc37f7b6479027e5b8fa92e0f,
-        type: 3}
-      propertyPath: fpsController
-      value: 
-      objectReference: {fileID: 11400004}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ded245bc37f7b6479027e5b8fa92e0f, type: 3}
 --- !u!4 &4920229020420593956 stripped

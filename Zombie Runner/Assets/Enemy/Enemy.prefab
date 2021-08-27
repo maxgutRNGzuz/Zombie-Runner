@@ -574,7 +574,7 @@ MonoBehaviour:
   isProvoked: 0
   player: {fileID: 0}
   destination: {fileID: 0}
-  chaseRange: 5
+  chaseRange: 15
   turnSpeed: 5
 --- !u!114 &454562537259678429
 MonoBehaviour:
