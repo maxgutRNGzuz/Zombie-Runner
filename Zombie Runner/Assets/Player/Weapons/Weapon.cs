@@ -15,9 +15,9 @@ public class Weapon : MonoBehaviour
 
     bool canShoot = true;
 
-    public void ChangeCanShoot(bool value)
+    void OnEnable()
     {
-        canShoot = value;
+        canShoot = true;
     }
 
     void Update()
@@ -25,10 +25,10 @@ public class Weapon : MonoBehaviour
                 print(canShoot);
         if (Input.GetMouseButton(0) && canShoot == true)
         {
-            if(ammoSlot.GetCurrentAmmo() > 0)
-            {
-                StartCoroutine(Shoot());
-            }
+            //if(ammoSlot.GetCurrentAmmo() > 0)
+            //{
+            //    StartCoroutine(Shoot());
+            //}
         }
     }
 
@@ -39,7 +39,7 @@ public class Weapon : MonoBehaviour
         PlayMuzzleFlash();
         ProcessRaycast();
 
-        ammoSlot.ReduceCurrentAmmo();
+        //ammoSlot.ReduceCurrentAmmo();
 
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;

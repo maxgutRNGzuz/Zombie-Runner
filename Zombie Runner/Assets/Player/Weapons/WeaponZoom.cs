@@ -59,6 +59,8 @@ public class WeaponZoom : MonoBehaviour
         scopeOverlay.SetActive(false);
         weaponCamera.SetActive(true);
 
+        mainCamera.fieldOfView = normalFOV;
+
         fpsController.mouseLook.XSensitivity = normalMouseSensitivity;
         fpsController.mouseLook.YSensitivity = normalMouseSensitivity;
     }

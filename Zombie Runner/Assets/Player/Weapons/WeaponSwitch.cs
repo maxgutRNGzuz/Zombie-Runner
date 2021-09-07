@@ -35,7 +35,6 @@ public class WeaponSwitch : MonoBehaviour
                 weapons[i].SetActive(true);
 
                 Weapon weapon = weapons[i].GetComponent<Weapon>();
-                weapon.ChangeCanShoot(true);
             }
             else
             {
@@ -64,7 +63,7 @@ public class WeaponSwitch : MonoBehaviour
 
     void ProcessScrollInput()
     {
-        if(Input.GetAxis("Mouse ScrollWheel") > 0)
+        if(Input.GetAxis("Mouse ScrollWheel") < 0)
         {
             if(currentWeaponIndex >= weapons.Length - 1) //if we are at last weapon and scroll up, we loop back to weapon 1. -1 is because array length doesnt start with 0
             {
@@ -75,7 +74,7 @@ public class WeaponSwitch : MonoBehaviour
                 currentWeaponIndex++;
             }
         }
-        else if(Input.GetAxis("Mouse ScrollWheel") < 0)
+        else if(Input.GetAxis("Mouse ScrollWheel") > 0)
         {
             if (currentWeaponIndex <= 0) //if we are at last weapon and scroll down, we loop back to weapon max.
             {
