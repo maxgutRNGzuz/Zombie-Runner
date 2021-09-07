@@ -553,7 +553,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ammoSlot
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1555138005428842550}
     - target: {fileID: 2110683465287072475, guid: 13b4446cf7a4a864ea363d6f3952dc53,
         type: 3}
       propertyPath: timeBetweenShots
@@ -694,6 +694,11 @@ PrefabInstance:
         type: 3}
       propertyPath: ammoSlot
       value: 
+      objectReference: {fileID: 1555138005428842550}
+    - target: {fileID: 7132978450553861445, guid: 4ded245bc37f7b6479027e5b8fa92e0f,
+        type: 3}
+      propertyPath: ammoType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7132978450553861445, guid: 4ded245bc37f7b6479027e5b8fa92e0f,
         type: 3}
