@@ -19,6 +19,11 @@ public class WeaponZoom : MonoBehaviour
 
     bool isScoped = false;
 
+    void OnDisable()
+    {
+        OnUnscoped();
+    }
+
     void Update()
     {
         if (Input.GetButtonDown("Fire2"))

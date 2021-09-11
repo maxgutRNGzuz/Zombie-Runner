@@ -23,7 +23,6 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-                print(canShoot);
         if (Input.GetMouseButton(0) && canShoot == true)
         {
             if (ammoSlot.GetCurrentAmmo(ammoType) > 0)

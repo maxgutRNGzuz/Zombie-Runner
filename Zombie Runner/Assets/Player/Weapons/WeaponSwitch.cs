@@ -40,11 +40,11 @@ public class WeaponSwitch : MonoBehaviour
             {
                 weapons[i].SetActive(false);
 
-                WeaponZoom weaponZoom = weapons[i].GetComponent<WeaponZoom>();
-                if(weaponZoom != null)
-                {
-                    weaponZoom.OnUnscoped();
-                }
+                //WeaponZoom weaponZoom = weapons[i].GetComponent<WeaponZoom>();
+                //if(weaponZoom != null)
+                //{
+                //    weaponZoom.OnUnscoped();
+                //}
             }
         }
     }
